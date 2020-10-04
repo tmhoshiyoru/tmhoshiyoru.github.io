@@ -3110,8 +3110,6 @@
 /* Footer */
 
 	#footer {
-		z-index: 99999;
-		position: fixed;
 		padding: 6em 0;
 		background: #6cc091;
 		color: #fff;
