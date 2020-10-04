@@ -136,9 +136,10 @@ best case
 65</code></pre>
 							<h4>題目解析</h4>
 							<p>首先我們先將輸入資料儲存進程式裡。<br>因為陣列並不大，只要宣告一個大小為 n 的陣列即可，這邊採用輸入 n 並用 n 來開一個陣列的方式。<br>當輸入完陣列的內容之後，可直接使用定義在 &lt;algorithm&gt; 底下的sort()函式，直接將此陣列由小至大排序完成後輸出。<br>為了求快速，直接利用同樣是定義在 &lt;algorithm&gt; 底下的 lower_bound() 函式進行二分搜尋，尋找大於等於 60 的最小數字位置。<br>
-							此處將碰到兩種情況：
+							此處將碰到兩種特殊情況：
 							<li>二分搜尋結果為 0 ，代表所有人都及格，輸出 best case</li>
-							<li>二分搜尋結果為 n ，代表所有人都不及格，輸出 worst case</li></p>
+							<li>二分搜尋結果為 n ，代表所有人都不及格，輸出 worst case</li>
+							除此之外，其他都依照二分搜尋找到的位置，輸出該位置的元素即可。</p>
 							<h4>參考解答</h4>
 							<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
