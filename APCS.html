@@ -38,57 +38,57 @@
 				<div class="inner" style="margin-left:3%;width:22%;float:left">
 					<nav>
 	    				<ul>
-	    					<a href="#1">105年03月05日</a><br> 
+	    					<a href="APCS/1050305.html">105年03月05日</a><br> 
 	        				<li>1. 成績指標</li>
 	        				<li>2. 矩陣轉換</li>
 	        				<li>3. 線段覆蓋長度</li>
 	        				<li>4. 血緣關係</li>
-	        				<a href="#2">105年10月29日</a><br> 
+	        				<a href="APCS/1051029.html">105年10月29日</a><br> 
 	        				<li>1. 三角形辨別</li>
 	        				<li>2. 最大和</li>
 	        				<li>3. 定時K彈</li>
 	        				<li>4. 棒球遊戲</li>
-	        				<a href="#3">106年03月04日</a><br> 
+	        				<a href="APCS/1060304.html">106年03月04日</a><br> 
 	        				<li>1. 秘密差</li>
 	        				<li>2. 小群體</li>
 	        				<li>3. 數字龍捲風</li>
 	        				<li>4. 基地台</li>
-	        				<a href="#4">106年10月28日</a><br> 
+	        				<a href="APCS/1061028.html">106年10月28日</a><br> 
 	        				<li>1. 邏輯運算子</li>
 	        				<li>2. 交錯字串</li>
 	        				<li>3. 樹狀圖分析</li>
 	        				<li>4. 物品堆疊</li>
-	        				<a href="#5">107年06月10日</a><br> 
+	        				<a href="APCS/1070610.html">107年06月10日</a><br> 
 	        				<li>1. 特殊編碼</li>
 	        				<li>2. 完全奇數</li>
 	        				<li>3. 工作排程</li>
 	        				<li>4. 反序數量</li>
-	        				<a href="#6">107年10月27日</a><br> 
+	        				<a href="APCS/1071027.html">107年10月27日</a><br> 
 	        				<li>1. 王牌投手</li>
 	        				<li>2. 單調字串</li>
 	        				<li>3. DF Expression</li>
 	        				<li>4. 置物箱出租</li>
-	        				<a href="#7">108年02月16日</a><br> 
+	        				<a href="APCS/1080216.html">108年02月16日</a><br> 
 	        				<li>1. 城市移動</li>
 	        				<li>2. 彩帶長度</li>
 	        				<li>3. 函數運算</li>
 	        				<li>4. 能力指標</li>
-	        				<a href="#8">108年06月15日</a><br> 
+	        				<a href="APCS/1080615.html">108年06月15日</a><br> 
 	        				<li>1. 籃賽短訊</li>
 	        				<li>2. 機器人走棋盤</li>
 	        				<li>3. 卡通團隊</li>
 	        				<li>4. 完美彩帶</li>
-	        				<a href="#9">108年10月26日</a><br> 
+	        				<a href="APCS/1081026.html">108年10月26日</a><br> 
 	        				<li>1. 樂曲修改</li>
 	        				<li>2. 洗牌</li>
 	        				<li>3. 闖關路線</li>
 	        				<li>4. 刪除邊界</li>
-	        				<a href="#10">109年01月05日</a><br> 
+	        				<a href="APCS/1090105.html">109年01月05日</a><br> 
 	        				<li>1. 猜拳模擬</li>
 	        				<li>2. 矩陣總和</li>
 	        				<li>3. 伐木</li>
 	        				<li>4. 自動分裝</li>
-	        				<a href="#11">109年07月04日</a><br> 
+	        				<a href="APCS/1090704.html">109年07月04日</a><br> 
 	        				<li>1. 購物分析</li>
 	        				<li>2. 骰子</li>
 	        				<li>3. 圓環出口</li>
@@ -101,242 +101,9 @@
 						<h2>APCS 歷屆試題解析</h2>
 						<p class="align-left">本頁針對目前已收錄之 APCS 試題進行解題與分析，部分題目的來源為網路，可能與實際題意有落差，請注意！<br>所有題目都是以C++語言為作答語言撰寫的解答，大多是善用各種技巧的解法。對初學者來說剛開始閱讀可能會些許吃力，但看久了就會越來越上手的。如有需要，請自行將此解答用其他語言撰寫。</p>
 					</header>
-					<div id="1">
-						<h2>105年03月05日</h2>
-						<div>
-							<h3>1. 成績指標</h3>
-							<h4>題目敘述</h4>
-							<p>一次考試中，於所有及格學生中獲取最低分數者最為幸運，反之，於所有不及格同學中，獲取最高分數者，可以說是最為不幸，而此二種分數，可以視為成績指標。<br>
-							請你設計一支程式，讀入全班成績(人數不固定)，請對所有分數進行排序，並分別找出不及格中最高分數，以及及格中最低分數。<br>
-							當找不到最低及格分數，表示對於本次考試而言，這是一個不幸之班級，此時請你印出：「worst case」；反之，當找不到最高不及格分數時，請你印出「best case」。<br>
-							註：假設及格分數為 60 ，每筆測資皆為 0~100 間整數，且筆數未定。</p>
-							<h4>輸入</h4>
-							<p>第一行輸入學生人數，第二行為各學生分數(0 ~100 間)，分數與分數之間以一個空白間隔。每一筆測資的學生人數為 1~20 的整數。<br>
-							輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為 2 秒，依正確通過測資筆數給分。</p>
-							<h4>輸出</h4>
-							<p>每筆測資輸出三行。<br>第一行由小而大印出所有成績，兩數字之間以一個空白間隔，最後一個數字後無空白；<br>第二行印出最高不及格分數，如果全數及格時，於此行印出 best case；<br>第三行印出最低及格分數，當全數不及格時，於此行印出 worst case。</p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext">10
-0 11 22 33 55 66 77 99 88 44</code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext">0 11 22 33 44 55 66 77 88 99
-55
-66</code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext">1
-13</code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext">13
-13
-worst case</code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext">2
-73 65</code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext">65 73
-best case
-65</code></pre>
-							<h4>題目解析</h4>
-							<p>首先我們先將輸入資料儲存進程式裡。<br>因為陣列並不大，只要宣告一個大小為 n 的陣列即可，這邊採用輸入 n 並用 n 來開一個陣列的方式。<br>當輸入完陣列的內容之後，可直接使用定義在 &lt;algorithm&gt; 底下的sort()函式，直接將此陣列由小至大排序完成後輸出。<br>為了求快速，直接利用同樣是定義在 &lt;algorithm&gt; 底下的 lower_bound() 函式進行二分搜尋，尋找大於等於 60 的最小數字位置。<br>
-							此處將碰到兩種特殊情況：
-							<li>二分搜尋結果為 0 ，代表所有人都及格，輸出 best case</li>
-							<li>二分搜尋結果為 n ，代表所有人都不及格，輸出 worst case</li>
-							除此之外，其他都依照二分搜尋找到的位置，輸出該位置的元素即可。</p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main(){
-	int n;
-	cin &gt;&gt; n;
-	int arr[n];
-	for(int &i:arr)cin &gt;&gt; i;
-	sort(arr, arr + n);
-	for(int i=0;i&lt;n;i++) cout &lt;&lt; arr[i] &lt;&lt; (i==n-1?'\n':' ');
-	int e = lower_bound(arr, arr + n, 60) - arr;
-	if(e == 0)cout &lt;&lt; "best case\n"; else cout &lt;&lt; arr[e - 1] &lt;&lt; endl;
-	if(e == n)cout &lt;&lt; "worst case"; else cout &lt;&lt; arr[e];
-}</code></pre>
-						</div>
-						<div>
-							<h3>矩陣轉換</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>線段覆蓋長度</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>血緣關係</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
+					<div>
+						<h2>請點選左邊側欄開始閱讀</h2>
 					</div>
-					<div id="2">
-					<h2>105年10月29日</h2>
-						<div>
-							<h3>這是模板</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>這是模板</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>這是模板</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>這是模板</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-					</div>
-
 				</div>
 			</section>
 
