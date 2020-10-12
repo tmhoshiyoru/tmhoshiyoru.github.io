@@ -102,40 +102,43 @@
 						<p class="align-left">本頁針對目前已收錄之 APCS 試題進行解題與分析，部分題目的來源為網路，可能與實際題意有落差，請注意！<br>所有題目都是以C++語言為作答語言撰寫的解答，大多是善用各種技巧的解法。對初學者來說剛開始閱讀可能會些許吃力，但看久了就會越來越上手的。如有需要，請自行將此解答用其他語言撰寫。</p>
 					</header>
 					<div>
-						<h2>105年03月05日</h2>
-						<div>
-							<h3>1. 成績指標</h3>
-							<h4>題目敘述</h4>
-							<p>一次考試中，於所有及格學生中獲取最低分數者最為幸運，反之，於所有不及格同學中，獲取最高分數者，可以說是最為不幸，而此二種分數，可以視為成績指標。<br>
-							請你設計一支程式，讀入全班成績(人數不固定)，請對所有分數進行排序，並分別找出不及格中最高分數，以及及格中最低分數。<br>
-							當找不到最低及格分數，表示對於本次考試而言，這是一個不幸之班級，此時請你印出：「worst case」；反之，當找不到最高不及格分數時，請你印出「best case」。<br>
-							註：假設及格分數為 60 ，每筆測資皆為 0~100 間整數，且筆數未定。</p>
-							<h4>輸入</h4>
-							<p>第一行輸入學生人數，第二行為各學生分數(0 ~100 間)，分數與分數之間以一個空白間隔。每一筆測資的學生人數為 1~20 的整數。<br>
-							輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為 2 秒，依正確通過測資筆數給分。</p>
-							<h4>輸出</h4>
-							<p>每筆測資輸出三行。<br>第一行由小而大印出所有成績，兩數字之間以一個空白間隔，最後一個數字後無空白；<br>第二行印出最高不及格分數，如果全數及格時，於此行印出 best case；<br>第三行印出最低及格分數，當全數不及格時，於此行印出 worst case。</p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext">10
-0 11 22 33 55 66 77 99 88 44</code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext">0 11 22 33 44 55 66 77 88 99
-55
-66</code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext">1
-13</code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext">13
-13
-worst case</code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext">2
-73 65</code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext">65 73
+						<h2 id="apcs-1050305">APCS 1050305</h2>
+<h3 id="-">1. 成績指標</h3>
+<h4 id="-">描述</h4>
+<p>一次考試中，於所有及格學生中獲取最低分數者最為幸運，反之，於所有不及格同學中，獲取最高分數者，可以說是最為不幸，而此二種分數，可以視為成績指標。</p>
+<p>請你設計一支程式，讀入全班成績(人數不固定)，請對所有分數進行排序，並分別找出不及格中最高分數，以及及格中最低分數。</p>
+<p>當找不到最低及格分數，表示對於本次考試而言，這是一個不幸之班級，此時請你印出：「worst case」；反之，當找不到最高不及格分數時，請你印出「best case」。</p>
+<p>註：假設及格分數為  60 ，每筆測資皆為  0~100  間整數，且筆數未定。</p>
+<h4 id="-">輸入</h4>
+<p>第一行輸入學生人數，第二行為各學生分數(0 ~100  間)，分數與分數之間以一個空白間隔。每一筆測資的學生人數為  1~20  的整數。</p>
+<p>輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為  2  秒，依正確通過測資筆數給分。</p>
+<h4 id="-">輸出</h4>
+<p>每筆測資輸出三行。</p>
+<p>第一行由小而大印出所有成績，兩數字之間以一個空白間隔，最後一個數字後無空白；</p>
+<p>第二行印出最高不及格分數，如果全數及格時，於此行印出  best case；</p>
+<p>第三行印出最低及格分數，當全數不及格時，於此行印出  worst case。</p>
+<h4 id="-1">輸入範例1</h4>
+<pre><code><span class="hljs-number">10</span>
+<span class="hljs-number">0</span> <span class="hljs-number">11</span> <span class="hljs-number">22</span> <span class="hljs-number">33</span> <span class="hljs-number">55</span> <span class="hljs-number">66</span> <span class="hljs-number">77</span> <span class="hljs-number">99</span> <span class="hljs-number">88</span> <span class="hljs-number">44</span>
+</code></pre><h3 id="-1">輸出範例1</h3>
+<pre><code><span class="hljs-number">0</span> <span class="hljs-number">11</span> <span class="hljs-number">22</span> <span class="hljs-number">33</span> <span class="hljs-number">44</span> <span class="hljs-number">55</span> <span class="hljs-number">66</span> <span class="hljs-number">77</span> <span class="hljs-number">88</span> <span class="hljs-number">99</span>
+<span class="hljs-number">55</span>
+<span class="hljs-number">66</span>
+</code></pre><h3 id="-2">輸入範例2</h3>
+<pre><code><span class="hljs-number">1</span>
+<span class="hljs-number">13</span>
+</code></pre><h3 id="-2">輸出範例2</h3>
+<pre><code><span class="hljs-number">13</span>
+<span class="hljs-number">13</span>
+worst case
+</code></pre><h3 id="-3">輸入範例3</h3>
+<pre><code><span class="hljs-number">2</span>
+<span class="hljs-symbol">73 </span><span class="hljs-number">65</span>
+</code></pre><h3 id="-3">輸出範例3</h3>
+<pre><code><span class="hljs-number">65</span> <span class="hljs-number">73</span>
 best case
-65</code></pre>
+<span class="hljs-number">65</span>
+</code></pre><hr>
 							<h4>題目解析</h4>
 							<p>首先我們先將輸入資料儲存進程式裡。<br>因為陣列並不大，只要宣告一個大小為 n 的陣列即可，這邊採用輸入 n 並用 n 來開一個陣列的方式。<br>當輸入完陣列的內容之後，可直接使用定義在 &lt;algorithm&gt; 底下的sort()函式，直接將此陣列由小至大排序完成後輸出。<br>為了求快速，直接利用同樣是定義在 &lt;algorithm&gt; 底下的 lower_bound() 函式進行二分搜尋，尋找大於等於 60 的最小數字位置。<br>
 							此處將碰到兩種特殊情況：
@@ -158,79 +161,210 @@ int main(){
 }</code></pre>
 						</div>
 						<div>
-							<h3>2. 矩陣轉換</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
+							<h3 id="-">2. 矩陣轉換</h3>
+<h4 id="-">描述</h4>
+<p><img src="https://render.githubusercontent.com/render/math?math=X_{ij}"> 來表示矩陣  X 中的第 i 列第  j  行的元素。如圖一中，<img src="https://render.githubusercontent.com/render/math?math=X_{32} = 6">。</p>
+<p>我們可以對矩陣定義兩種操作如下：</p>
+<p>翻轉：即第一列與最後一列交換、第二列與倒數第二列交換、…依此類推。</p>
+<p>旋轉：將矩陣以順時針方向轉 90 度。</p>
+<p>例如：矩陣 X 翻轉後可得到 Y，將矩陣 Y 再旋轉後可得到 Z。</p>
+<p><img src="http://judge.epass2u.com/public/upload/ff35a8f7d4.png" height=217></p>
+<p>一個矩陣 A 可以經過一連串的旋轉與翻轉操作後，轉換成新矩陣 B。如圖二中，A 經過翻轉與兩次旋轉後，可以得到 B。給定矩陣 B 和一連串的操作，請算出原始的矩陣 A。</p>
+<p><img src="http://judge.epass2u.com/public/upload/c09e6dbdd7.png" height=242></p>
+<h4 id="-">輸入</h4>
+<p>第一行有三個介於  1  與  10  之間的正整數 R, C, M。接下來有  R  行(line)是矩陣  B  的內容，每一行(line)都包含  C  個正整數，其中的第  i  行第  j  個數字代表矩陣<img src="https://render.githubusercontent.com/render/math?math=B_{ij}">的值。在矩陣內容後的一行有  M  個整數，表示對矩陣  A  進行的操作。第  k  個整數$m_k$代表第  k  個操作，如果<img src="https://render.githubusercontent.com/render/math?math=m_k = 0">則代表旋轉，<img src="https://render.githubusercontent.com/render/math?math=m_k = 1">代表翻轉。同一行的數字之間都是以一個空白間隔，且矩陣內容為  0~9  的整數。</p>
+<p>輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為  2  秒，依正確通過測資筆數給分。其中：</p>
+<ul>
+<li>第一子題組共  30  分，其每個操作都是翻轉。</li>
+<li>第二子題組共  70  分，操作有翻轉也有旋轉。</li>
+</ul>
+<h4 id="-">輸出</h4>
+<p>輸出包含兩個部分。第一個部分有一行，包含兩個正整數 R&#39; 和 C&#39;，以一個空白隔開，分別代表矩陣 A 的列數和行數。接下來有  R&#39; 行，每一行都包含 C&#39; 個正整數，且每一行的整數之間以一個空白隔開，其中第 i 行的第 j 個數字代表矩陣<img src="https://render.githubusercontent.com/render/math?math=A_{ij}">&quot; 的值。每一行的最後一個數字後並無空白。</p>
+<h4 id="-1">輸入範例1</h4>
+<pre><code><span class="hljs-symbol">3 </span><span class="hljs-number">2</span> <span class="hljs-number">3</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">1</span>
+<span class="hljs-symbol">3 </span><span class="hljs-number">1</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">2</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">0</span> <span class="hljs-number">0</span>
+</code></pre><h4 id="-1">輸出範例1</h4>
+<pre><code><span class="hljs-symbol">3 </span><span class="hljs-number">2</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">1</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">3</span>
+<span class="hljs-symbol">2 </span><span class="hljs-number">1</span>
+</code></pre><h4 id="-2">輸入範例2</h4>
+<pre><code><span class="hljs-symbol">3 </span><span class="hljs-number">2</span> <span class="hljs-number">2</span>
+<span class="hljs-symbol">3 </span><span class="hljs-number">3</span>
+<span class="hljs-symbol">2 </span><span class="hljs-number">1</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">2</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">1</span>
+</code></pre><h4 id="-2">輸出範例2</h4>
+<pre><code><span class="hljs-symbol">2 </span><span class="hljs-number">3</span>
+<span class="hljs-symbol">2 </span><span class="hljs-number">1</span> <span class="hljs-number">3</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">2</span> <span class="hljs-number">3</span>
+</code></pre><hr>
 							<h4>題目解析</h4>
 							<p></p>
 							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
+							<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; turn(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; v){
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; r;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=v.size()<span class="hljs-number">-1</span>;i&gt;=<span class="hljs-number">0</span>;i--) r.push_back(v[i]);
+    <span class="hljs-keyword">return</span> r;
+}
+<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; rotate(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; v){
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; r(v[<span class="hljs-number">0</span>].size());
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;r.size();i++){
+        r[i].resize(v.size());
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;r[i].size();j++) r[i][j] = v[j][v[<span class="hljs-number">0</span>].size() - <span class="hljs-number">1</span> - i];
+    }
+    <span class="hljs-keyword">return</span> r;
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> r, c, m;
+    <span class="hljs-built_in">cin</span> &gt;&gt; r &gt;&gt; c &gt;&gt; m;
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; v(r);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> &amp;i:v){
+        i.resize(c);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> &amp;j:i) <span class="hljs-built_in">cin</span> &gt;&gt; j;
+    }
+    <span class="hljs-built_in">stack</span>&lt;<span class="hljs-keyword">int</span>&gt; op;
+    <span class="hljs-keyword">while</span>(m--){
+        <span class="hljs-keyword">int</span> k;
+        <span class="hljs-built_in">cin</span> &gt;&gt; k;
+        op.push(k);
+    }
+    <span class="hljs-keyword">while</span>(!op.empty()){
+        v = op.top() ? turn(v) : rotate(v);
+        op.pop();
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; v.size() &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; v[<span class="hljs-number">0</span>].size() &lt;&lt;<span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:v)
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;i.size();j++)
+            <span class="hljs-built_in">cout</span> &lt;&lt; i[j] &lt;&lt; (j == i.size() - <span class="hljs-number">1</span> ? <span class="hljs-string">'\n'</span> : <span class="hljs-string">' '</span>);
+}
+</code></pre>
+
 						</div>
 						<div>
-							<h3>3. 線段覆蓋長度</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
+							<h3 id="-">3. 線段覆蓋長度</h3>
+<h4 id="-">描述</h4>
+<p>給定一維座標上一些線段，求這些線段所覆蓋的長度，注意，重疊的部分只能算一次。例如給定三個線段：(5, 6)、(1, 2)、(4, 8)、和(7, 9)，如下圖，線段覆蓋長度為 6。</p>
+<p><img src="http://judge.epass2u.com/public/upload/b1d05089b1.png" width=800></p>
+<h4 id="-">輸入</h4>
+<p>第一列是一個正整數 N，表示此測試案例有 N 個線段。</p>
+<p>接著的 N 列每一列是一個線段的開始端點座標和結束端點座標整數值，開始端點座標值小於等於結束端點座標值，兩者之間以一個空格區隔。</p>
+<p>輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為  2  秒，依正確通過測資筆數給分。每一個端點座標是一個介於  0~M  之間的整數，每筆測試案例線段個數上限為 N。其中：</p>
+<p>第一子題組共  30  分，M&lt;1000，N&lt;100，線段沒有重疊。
+第二子題組共  40  分，M&lt;1000，N&lt;100，線段可能重疊。
+第三子題組共  30  分，M&lt;10000000，N&lt;10000，線段可能重疊。</p>
+<h4 id="-">輸出</h4>
+<p>輸出其總覆蓋的長度。</p>
+<h4 id="-1">輸入範例1</h4>
+<pre><code><span class="hljs-number">5</span>
+<span class="hljs-symbol">160 </span><span class="hljs-number">180</span>
+<span class="hljs-symbol">150 </span><span class="hljs-number">200</span>
+<span class="hljs-symbol">280 </span><span class="hljs-number">300</span>
+<span class="hljs-symbol">300 </span><span class="hljs-number">330</span>
+<span class="hljs-symbol">190 </span><span class="hljs-number">210</span>
+</code></pre><h4 id="-1">輸出範例1</h4>
+<pre><code><span class="hljs-number">110</span>
+</code></pre><h4 id="-2">輸入範例2</h4>
+<pre><code><span class="hljs-number">1</span>
+<span class="hljs-symbol">120 </span><span class="hljs-number">120</span>
+</code></pre><h4 id="-2">輸出範例2</h4>
+<pre><code><span class="hljs-number">0</span>
+</code></pre><hr>
 							<h4>題目解析</h4>
 							<p></p>
 							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
+							<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> n;
+    <span class="hljs-built_in">cin</span> &gt;&gt; n;
+    <span class="hljs-built_in">vector</span>&lt;pair&lt;<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>&gt;&gt; v(n*<span class="hljs-number">2</span>);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">2</span>*n;i++){
+        <span class="hljs-built_in">cin</span> &gt;&gt; v[i].first;
+        v[i].second = i % <span class="hljs-number">2</span> ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>;
+    }
+    sort(v.begin(), v.end());
+    <span class="hljs-keyword">int</span> r = <span class="hljs-number">0</span>, s = <span class="hljs-number">0</span>, t = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:v){
+        <span class="hljs-keyword">if</span>(s == <span class="hljs-number">0</span>) t = i.first;
+        s += i.second;
+        <span class="hljs-keyword">if</span>(s == <span class="hljs-number">0</span>) r += i.first - t;
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; r;
+}
+</code></pre>
 						</div>
 						<div>
-							<h3>4. 血緣關係</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
+							<h3 id="-">4. 血緣關係</h3>
+<h4 id="-">描述</h4>
+<p>小宇有一個大家族。有一天，他發現記錄整個家族成員和成員間血緣關係的家族族譜。小宇對於最遠的血緣關係(我們稱之為&quot;血緣距離&quot;)有多遠感到很好奇。</p>
+<p><img src="http://judge.epass2u.com/public/upload/3bf161c289.png" width=300></p>
+<p>上圖為家族的關係圖。 0 是 7 的孩子， 1、2 和 3 是 0 的孩子， 4 和 5 是 1 的孩子， 6 是 3 的孩子。我們可以輕易的發現最遠的親戚關係為 4 (或 5 )和 6 ，他們的&quot;血緣距離&quot;是 4 (4~1，1~0，0~3，3~6)。</p>
+<p>給予任一家族的關係圖，請找出最遠的&quot;血緣距離&quot;。你可以假設只有一個人是整個家族成員的祖先，而且沒有兩個成員有同樣的小孩。</p>
+<h4 id="-">輸入</h4>
+<p>第一行為一個正整數 n 代表成員的個數，每人以 0 ~ n - 1 之間唯一的編號代表。接著的 n - 1 行，每行有兩個以一個空白隔開的整數 a 與 b （0 ≤ a, b ≤ n – 1），代表 b 是 a 的孩子。</p>
+<h4 id="-">輸出</h4>
+<p>每筆測資輸出一行最遠&quot;血緣距離&quot;的答案。</p>
+<h4 id="-1">輸入範例1</h4>
+<pre><code><span class="hljs-number">8</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">1</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">2</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">3</span>
+<span class="hljs-symbol">7 </span><span class="hljs-number">0</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">4</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">5</span>
+<span class="hljs-symbol">3 </span><span class="hljs-number">6</span>
+</code></pre><h4 id="-1">輸出範例1</h4>
+<pre><code><span class="hljs-number">4</span>
+</code></pre><h4 id="-2">輸入範例2</h4>
+<pre><code><span class="hljs-number">4</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">1</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">2</span>
+<span class="hljs-symbol">2 </span><span class="hljs-number">3</span>
+</code></pre><h4 id="-2">輸出範例2</h4>
+<pre><code><span class="hljs-number">3</span>
+</code></pre>
 							<h4>題目解析</h4>
 							<p></p>
 							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
+							<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; v;
+<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; h;
+<span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> r)</span></span>{
+    <span class="hljs-keyword">if</span>(v[r].size() == <span class="hljs-number">0</span>)<span class="hljs-keyword">return</span> h[r];
+    <span class="hljs-keyword">int</span> f = <span class="hljs-number">0</span>, s = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:v[r]){
+        <span class="hljs-keyword">int</span> t = dfs(i);
+        <span class="hljs-keyword">if</span>(t &gt;= s) s = t;
+        <span class="hljs-keyword">if</span>(s &gt;= f) swap(f, s);
+    }
+    res = max(res, s + f + min(<span class="hljs-number">2</span>, (<span class="hljs-keyword">int</span>)v[r].size()));
+    h[r] = f + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">return</span> h[r];
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> n;
+    <span class="hljs-built_in">cin</span> &gt;&gt; n;
+    <span class="hljs-keyword">int</span> r = n - <span class="hljs-number">1</span>;
+    v.resize(n), h.resize(n);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n<span class="hljs-number">-1</span>;i++){
+        <span class="hljs-keyword">int</span> a, b;
+        <span class="hljs-built_in">cin</span> &gt;&gt; a &gt;&gt; b;
+        v[a].push_back(b);
+        r ^= (i ^ b);
+    }
+    dfs(r);
+    <span class="hljs-built_in">cout</span> &lt;&lt; res;
+}
+</code></pre>
+
 						</div>
 					</div>
 				</div>
