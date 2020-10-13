@@ -98,116 +98,269 @@
 	        	</div>
 				<div class="inner" style="width:60%;float:left">
 					<header class="align-center">
-						<h2>105 年 03 月 05 日</h2>
-						<p class="align-center">1. 成績指標<br>
-											2. 矩陣轉換<br>
-											3. 線段覆蓋長度<br>
-											4. 血緣關係</p>
+						<h2>105 年 10 月 29 日</h2>
+						<p class="align-center">1. 三角形辨別<br>
+											2. 最大和<br>
+											3. 定時K彈<br>
+											4. 棒球遊戲</p>
 					</header>
 					<div>
-					<h2>105年10月29日</h2>
-						<div>
-							<h3>1. 三角形辨別</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>2. 最大和</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>3. 定時K彈</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
-						<div>
-							<h3>4. 棒球遊戲</h3>
-							<h4>題目敘述</h4>
-							<p></p>
-							<h4>輸入</h4>
-							<p></p>
-							<h4>輸出</h4>
-							<p></p>
-							<h4>輸入範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例1</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例2</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸入範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>輸出範例3</h4>
-							<pre><code class="plaintext"></code></pre>
-							<h4>題目解析</h4>
-							<p></p>
-							<h4>參考解答</h4>
-							<pre><code class="cpp"></code></pre>
-						</div>
+						<h2 id="-">三角形辨別</h2>
+<h3 id="-">描述</h3>
+<p>三角形除了是最基本的多邊形外，亦可進一步細分為鈍角三角形、直角三角形及銳角三角形。若給定三個線段的長度，透過下列公式的運算，即可得知此三線段能否構成三角形，亦可判斷是直角、銳角和鈍角三角形。</p>
+<p>提示：若  a、b、c  為三個線段的邊長，且  c  為最大值，則</p>
+<ul>
+<li>若  a + b ≤ c                        ，三線段無法構成三角形</li>
+<li>若  a  ×  a + b  ×  b &lt; c  ×  c，三線段構成鈍角三角形    (Obtuse triangle)</li>
+<li>若  a  ×  a + b  ×  b = c  ×  c，三線段構成直角三角形    (Right triangle)</li>
+<li>若  a  ×  a + b  ×  b &gt; c  ×  c，三線段構成銳角三角形    (Acute triangle)
+請設計程式以讀入三個線段的長度判斷並輸出此三線段可否構成三角形？若可，判斷並輸出其所屬三角形類型。</li>
+</ul>
+<h3 id="-">輸入</h3>
+<p>輸入僅一行包含三正整數，三正整數皆小於  30,001，兩數之間有一空白。</p>
+<p>輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為 1 秒，依正確通過測資筆數給分。</p>
+<h3 id="-">輸出</h3>
+<p>輸出共有兩行，第一行由小而大印出此三正整數，兩數字之間以一個空白間隔，最後一個數字後不應有空白；第二行輸出三角形的類型：</p>
+<ul>
+<li>若無法構成三角形時輸出「No」；</li>
+<li>若構成鈍角三角形時輸出「Obtuse」；</li>
+<li>若直角三角形時輸出「Right」；</li>
+<li>若銳角三角形時輸出「Acute」。</li>
+</ul>
+<h3 id="-1">輸入範例1</h3>
+<pre><code><span class="hljs-symbol">3 </span><span class="hljs-number">4</span> <span class="hljs-number">5</span>
+</code></pre><h3 id="-1">輸出範例1</h3>
+<pre><code><span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
+Right
+</code></pre><h3 id="-2">輸入範例2</h3>
+<pre><code><span class="hljs-symbol">101 </span><span class="hljs-number">100</span> <span class="hljs-number">99</span>
+</code></pre><h3 id="-2">輸出範例2</h3>
+<pre><code><span class="hljs-number">99</span> <span class="hljs-number">100</span> <span class="hljs-number">101</span>
+Acute
+</code></pre><h3 id="-3">輸入範例3</h3>
+<pre><code><span class="hljs-symbol">10 </span><span class="hljs-number">100</span> <span class="hljs-number">10</span>
+</code></pre><h3 id="-3">輸出範例3</h3>
+<pre><code><span class="hljs-number">10</span> <span class="hljs-number">10</span> <span class="hljs-number">100</span>
+No
+</code></pre>
+						<h4>題目解析</h4>
+						<p></p>
+						<h4>參考解答</h4>
+						<pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main(){
+    long long l<span class="hljs-string">[3]</span>;
+    for(auto &amp;i:l) cin &gt;&gt; i;
+    sort(l, l + <span class="hljs-number">3</span>);
+    cout &lt;&lt; l<span class="hljs-string">[0]</span> &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; l<span class="hljs-string">[1]</span> &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; l<span class="hljs-string">[2]</span> &lt;&lt; endl;
+    cout &lt;&lt; (l<span class="hljs-string">[0]</span> + l<span class="hljs-string">[1]</span> &lt;= l<span class="hljs-string">[2]</span> ? <span class="hljs-string">"No"</span> :
+            l<span class="hljs-string">[0]</span> * l<span class="hljs-string">[0]</span> + l<span class="hljs-string">[1]</span>*l<span class="hljs-string">[1]</span> &lt; l<span class="hljs-string">[2]</span> * l<span class="hljs-string">[2]</span> ? <span class="hljs-string">"Obtuse"</span> :
+            l<span class="hljs-string">[0]</span> * l<span class="hljs-string">[0]</span> + l<span class="hljs-string">[1]</span>*l<span class="hljs-string">[1]</span> == l<span class="hljs-string">[2]</span> * l<span class="hljs-string">[2]</span> ? <span class="hljs-string">"Right"</span> : <span class="hljs-string">"Acute"</span>);
+}
+</code></pre>
 					</div>
-
+					<div>
+						<h2 id="-">最大和</h2>
+<h3 id="-">描述</h3>
+<p>給定<img src="https://render.githubusercontent.com/render/math?math=N">群數字，每群都恰有<img src="https://render.githubusercontent.com/render/math?math=M">個正整數。若從每群數字中各選擇一個數字（假設第<img src="https://render.githubusercontent.com/render/math?math=i">群所選出數字為<img src="https://render.githubusercontent.com/render/math?math=t_i">），將所選出的<img src="https://render.githubusercontent.com/render/math?math=N">個數字加總即可得總和 <img src="https://render.githubusercontent.com/render/math?math=S = t_1 %2Bt_2%2B...%2Bt_N">。請寫程式計算<img src="https://render.githubusercontent.com/render/math?math=S">的最大值（最大總和），並判斷各群所選出的數字是否可以整除<img src="https://render.githubusercontent.com/render/math?math=S">。</p>
+<h3 id="-">輸入</h3>
+<p>第一行有二個正整數 N 和 M，1 ≤ N ≤ 20，1 ≤ M ≤ 20。</p>
+<p>接下來的 N 行，每一行各有 M 個正整數<img src="https://render.githubusercontent.com/render/math?math=x_i">，代表一群整數，數字與數字間有一個空格，且 <img src="https://render.githubusercontent.com/render/math?math=1\leq i\leq M">，以及<img src="https://render.githubusercontent.com/render/math?math=1\leq x_i\leq 256">。</p>
+<p>輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為  1  秒，依正確通過測資筆數給分。其中：</p>
+<ul>
+<li>第 1 子題組 20 分：<img src="https://render.githubusercontent.com/render/math?math=1\leq N\leq 20">，M = 1。</li>
+<li>第 2 子題組 30 分：<img src="https://render.githubusercontent.com/render/math?math=1\leq N\leq 20">，M = 2。</li>
+<li>第 3 子題組 50 分：<img src="https://render.githubusercontent.com/render/math?math=1\leq N\leq 20">，<img src="https://render.githubusercontent.com/render/math?math=1\leq M\leq 20">。</li>
+</ul>
+<h3 id="-">輸出</h3>
+<p>第一行輸出最大總和 S。</p>
+<p>第二行按照被選擇數字所屬群的順序，輸出可以整除 S 的被選擇數字，數字與數字間以一個空格隔開，最後一個數字後無空白；若 N 個被選擇數字都不能整除 S，就輸出-1。</p>
+<h3 id="-1">輸入範例1</h3>
+<pre><code><span class="hljs-symbol">3 </span><span class="hljs-number">2</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">5</span>
+<span class="hljs-symbol">6 </span><span class="hljs-number">4</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">1</span>
+</code></pre><h3 id="-1">輸出範例1</h3>
+<pre><code><span class="hljs-number">12</span>
+<span class="hljs-symbol">6 </span><span class="hljs-number">1</span>
+</code></pre><h3 id="-2">輸入範例2</h3>
+<pre><code><span class="hljs-symbol">4 </span><span class="hljs-number">3</span>
+<span class="hljs-symbol">6 </span><span class="hljs-number">3</span> <span class="hljs-number">2</span>
+<span class="hljs-symbol">2 </span><span class="hljs-number">7</span> <span class="hljs-number">9</span>
+<span class="hljs-symbol">4 </span><span class="hljs-number">7</span> <span class="hljs-number">1</span>
+<span class="hljs-symbol">9 </span><span class="hljs-number">5</span> <span class="hljs-number">3</span>
+</code></pre><h3 id="-2">輸出範例2</h3>
+<pre><code><span class="hljs-number">31</span>
+<span class="hljs-number">-1</span>
+</code></pre>
+						<h4>題目解析</h4>
+						<p></p>
+						<h4>參考解答</h4>
+						<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> n, m;
+    <span class="hljs-built_in">cin</span> &gt;&gt; n &gt;&gt; m;
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; arr(n), v;
+    <span class="hljs-keyword">int</span> s = <span class="hljs-number">0</span>, t = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++){
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;m;j++){
+            <span class="hljs-built_in">cin</span> &gt;&gt; t;
+            arr[i] = max(arr[i], t);
+        }
+        s += arr[i];
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:arr){
+        <span class="hljs-keyword">if</span>(s % i == <span class="hljs-number">0</span>) v.push_back(i);
+    }
+    <span class="hljs-keyword">if</span>(v.size() == <span class="hljs-number">0</span>) <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;v.size();i++) <span class="hljs-built_in">cout</span> &lt;&lt; v[i] &lt;&lt; (i == v.size() - <span class="hljs-number">1</span> ? <span class="hljs-string">'\n'</span> : <span class="hljs-string">' '</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+					</div>
+					<div>
+						<h2 id="-k-">定時K彈</h2>
+<h3 id="-">描述</h3>
+<p>「定時 K 彈」是一個團康遊戲， N 個人圍成一個圈，由 1 號依序到 N 號，從 1 號開始依序傳遞一枚玩具炸彈，炸彈每次到第 M 個人就會爆炸，此人即淘汰，被淘汰的人要離開圓圈，然後炸彈再從該淘汰者的下一個開始傳遞。遊戲之所以稱 K 彈是因為這枚炸彈只會爆炸 K 次，在第 K 次爆炸後，遊戲即停止，而此時在第 K 個淘汰者的下一位遊戲者被稱為幸運者，通常就會被要求表演節目。例如 N=5，M=2，如果 K=2 ，炸彈會爆炸兩次，被爆炸淘汰的順序依序是 2 與 4（參見下圖），這時 5 號就是幸運者。如果 K=3，剛才的遊戲會繼續，第三個淘汰的是 1 號，所以幸運者是 3 號。如果 K=4，下一輪淘汰 5 號，所以 3 號是幸運者。</p>
+<p>給定 N、M 與 K，請寫程式計算出誰是幸運者。
+<img src="http://hgoj.me/public/upload/942b649261.png" style="width:70%"></p>
+<h3 id="-">輸入</h3>
+<p>輸入只有一行包含三個正整數，依序為 N、M 與 K，兩數中間有一個空格分開。其中<img src="https://render.githubusercontent.com/render/math?math=1\leq K\lt N">。</p>
+<p>輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為 1 秒，依正確通過測資筆數給分。其中：</p>
+<ul>
+<li>第 1 子題組 20 分，<img src="https://render.githubusercontent.com/render/math?math=1\leq N\leq 100">，且 <img src="https://render.githubusercontent.com/render/math?math=1\leq M\leq 10">，<img src="https://render.githubusercontent.com/render/math?math=K = N - 1">。</li>
+<li>第 2 子題組 30 分，<img src="https://render.githubusercontent.com/render/math?math=1\leq N\leq 10,000">，且 <img src="https://render.githubusercontent.com/render/math?math=1\leq M\leq 1,000,000">，<img src="https://render.githubusercontent.com/render/math?math=K = N - 1">。</li>
+<li>第 3 子題組 20 分，<img src="https://render.githubusercontent.com/render/math?math=1\leq N\leq 200,000">，且 <img src="https://render.githubusercontent.com/render/math?math=1\leq M\leq 1,000,000">，<img src="https://render.githubusercontent.com/render/math?math=K = N - 1">。</li>
+<li>第 4 子題組 30 分，<img src="https://render.githubusercontent.com/render/math?math=1\leq N\leq 200,000">，且 <img src="https://render.githubusercontent.com/render/math?math=1\leq M\leq 1,000,000">， <img src="https://render.githubusercontent.com/render/math?math=1\leq K\lt N">。</li>
+</ul>
+<h3 id="-">輸出</h3>
+<p>請輸出幸運者的號碼，結尾有換行符號。</p>
+<h3 id="-1">輸入範例1</h3>
+<pre><code><span class="hljs-symbol">5 </span><span class="hljs-number">2</span> <span class="hljs-number">4</span>
+</code></pre><h3 id="-1">輸出範例1</h3>
+<pre><code><span class="hljs-number">3</span>
+</code></pre><h3 id="-2">輸入範例2</h3>
+<pre><code><span class="hljs-symbol">8 </span><span class="hljs-number">3</span> <span class="hljs-number">6</span>
+</code></pre><h3 id="-2">輸出範例2</h3>
+<pre><code><span class="hljs-number">4</span>
+</code></pre>
+						<h4>題目解析</h4>
+						<p></p>
+						<h4>參考解答</h4>
+						<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> n, m, k;
+    <span class="hljs-built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;
+    <span class="hljs-keyword">int</span> ans = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=n-k+<span class="hljs-number">1</span>;i&lt;=n;i++){
+        ans = (ans + m) % i;
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; ans + <span class="hljs-number">1</span>;
+}
+</code></pre>
+					</div>
+					<div>
+						<h2 id="-">棒球遊戲</h2>
+<h3 id="-">描述</h3>
+<p>謙謙最近迷上棒球，他想自己寫一個簡化的棒球遊戲計分程式。這個程式會讀入球隊中每位球員的打擊結果，然後計算出球隊的得分。</p>
+<p>這是個簡化版的模擬，假設擊球員的打擊結果只有以下情況：</p>
+<p>(1)  安打：以 1B, 2B, 3B 和HR分別代表一壘打、二壘打、三壘打和全（四）壘打。</p>
+<p>(2)  出局：以FO, GO, 和SO表示。</p>
+<p>這個簡化版的規則如下：</p>
+<p>(1)  球場上有四個壘包，稱為本壘、一壘、二壘和三壘。</p>
+<p>(2)  站在本壘握著球棒打球的稱為「擊球員」，站在另外三個壘包的稱為「跑壘員」。</p>
+<p>(3)  當擊球員的打擊結果為「安打」時，場上球員（擊球員與跑壘員）可以移動；結果為「出局」時，跑壘員不動，擊球員離場，換下一位擊球員。</p>
+<p>(4)  球隊總共有九位球員，依序排列。比賽開始由第  1  位開始打擊，當第  i  位球員打擊完畢後，由第(i+1)位球員擔任擊球員。當第九位球員完畢後，則輪回第一位球員。</p>
+<p>(5)  當打出  K  壘打時，場上球員（擊球員和跑壘員）會前進  K  個壘包。從本壘前進一個壘包會移動到一壘，接著是二壘、三壘，最後回到本壘。</p>
+<p>(6)  每位球員回到本壘時可得 1 分。</p>
+<p>(7)  每達到三個出局數時，一、二和三壘就會清空（跑壘員都得離開），重新開始。</p>
+<p><img src="http://hgoj.me/public/upload/a65ee4e666.png" style="width:300"></p>
+<p>請寫出具備這樣功能的程式，計算球隊的總得分。</p>
+<h3 id="-">輸入</h3>
+<p>每組測試資料固定有十行。</p>
+<p>第一到九行，依照球員順序，每一行代表一位球員的打擊資訊。每一行開始有一個正整數  a(<img src="https://render.githubusercontent.com/render/math?math=1\leq a\leq 5">)，代表球員總共打了 a 次。接下來有 a 個字串（均為兩個字元），依序代表每次打擊的結果。資料之間均以一個空白字元隔開。球員的打擊資訊不會有錯誤也不會缺漏。</p>
+<p>第十行有一個正整數  b (<img src="https://render.githubusercontent.com/render/math?math=1\leq b\leq 27">)，表示我們想要計算當總出局數累計到 b 時，該球隊的得分。輸入的打擊資訊中至少包含 b 個出局。</p>
+<p>輸入包含若干筆測試資料，每一筆測試資料的執行時間限制(time limit)均為 1 秒，依正確通過測資筆數給分。其中：</p>
+<ul>
+<li>第 1 子題組 20 分，打擊表現只有 HR 和 SO 兩種。</li>
+<li>第 2 子題組 20 分，安打表現只有 1B，而且 b 固定為 3。</li>
+<li>第 3 子題組 20 分， b 固定為  3。</li>
+<li>第 4 子題組 40 分，無特別限制。</li>
+</ul>
+<h3 id="-">輸出</h3>
+<p>計算在總計第 b 個出局數發生時的總得分，並將此得分輸出於一行。</p>
+<h3 id="-1">輸入範例1</h3>
+<pre><code><span class="hljs-symbol">5 </span><span class="hljs-number">1</span>B <span class="hljs-number">1</span>B FO GO <span class="hljs-number">1</span>B
+<span class="hljs-symbol">5 </span><span class="hljs-number">1</span>B <span class="hljs-number">2</span>B FO FO SO
+<span class="hljs-symbol">4 </span>SO HR SO <span class="hljs-number">1</span>B
+<span class="hljs-symbol">4 </span>FO FO FO HR
+<span class="hljs-symbol">4 </span><span class="hljs-number">1</span>B <span class="hljs-number">1</span>B <span class="hljs-number">1</span>B <span class="hljs-number">1</span>B
+<span class="hljs-symbol">4 </span>GO GO <span class="hljs-number">3</span>B GO
+<span class="hljs-symbol">4 </span><span class="hljs-number">1</span>B GO GO SO
+<span class="hljs-symbol">4 </span>SO GO <span class="hljs-number">2</span>B <span class="hljs-number">2</span>B
+<span class="hljs-symbol">4 </span><span class="hljs-number">3</span>B GO GO FO
+<span class="hljs-number">3</span>
+</code></pre><h3 id="-1">輸出範例1</h3>
+<pre><code><span class="hljs-number">0</span>
+</code></pre><h3 id="-2">輸入範例2</h3>
+<pre><code><span class="hljs-symbol">5 </span><span class="hljs-number">1</span>B <span class="hljs-number">1</span>B FO GO <span class="hljs-number">1</span>B
+<span class="hljs-symbol">5 </span><span class="hljs-number">1</span>B <span class="hljs-number">2</span>B FO FO SO
+<span class="hljs-symbol">4 </span>SO HR SO <span class="hljs-number">1</span>B
+<span class="hljs-symbol">4 </span>FO FO FO HR
+<span class="hljs-symbol">4 </span><span class="hljs-number">1</span>B <span class="hljs-number">1</span>B <span class="hljs-number">1</span>B <span class="hljs-number">1</span>B
+<span class="hljs-symbol">4 </span>GO GO <span class="hljs-number">3</span>B GO
+<span class="hljs-symbol">4 </span><span class="hljs-number">1</span>B GO GO SO
+<span class="hljs-symbol">4 </span>SO GO <span class="hljs-number">2</span>B <span class="hljs-number">2</span>B
+<span class="hljs-symbol">4 </span><span class="hljs-number">3</span>B GO GO FO
+<span class="hljs-number">6</span>
+</code></pre><h3 id="-2">輸出範例2</h3>
+<pre><code><span class="hljs-number">5</span>
+</code></pre>
+						<h4>題目解析</h4>
+						<p></p>
+						<h4>參考解答</h4>
+						<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">string</span> p[<span class="hljs-number">9</span>][<span class="hljs-number">5</span>];
+    <span class="hljs-keyword">int</span> n, b;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">9</span>;i++){
+        <span class="hljs-built_in">cin</span> &gt;&gt; n;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;n;j++) <span class="hljs-built_in">cin</span> &gt;&gt; p[i][j];
+    }
+    <span class="hljs-built_in">cin</span> &gt;&gt; b;
+    <span class="hljs-keyword">int</span> s = <span class="hljs-number">0</span>, o = <span class="hljs-number">0</span>;
+    <span class="hljs-built_in">bitset</span>&lt;4&gt; B;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++){
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">9</span>;j++){
+            <span class="hljs-keyword">if</span>(o == b) <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">if</span>(p[j][i][<span class="hljs-number">1</span>] == <span class="hljs-string">'O'</span>){
+                o++;
+                <span class="hljs-keyword">if</span>(o % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>){
+                    B.reset();
+                }
+            }
+            <span class="hljs-keyword">if</span>(p[j][i][<span class="hljs-number">1</span>] == <span class="hljs-string">'B'</span>){
+                B[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">int</span> m = p[j][i][<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>;
+                <span class="hljs-keyword">while</span>(m--){
+                    s += B[<span class="hljs-number">3</span>];
+                    B &lt;&lt;= <span class="hljs-number">1</span>;
+                }
+            }
+            <span class="hljs-keyword">if</span>(p[j][i] == <span class="hljs-string">"HR"</span>){
+                s += B.count() + <span class="hljs-number">1</span>;
+                B.reset();
+            }
+        }
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; s;
+}
+</code></pre>
+					</div>
 				</div>
 			</section>
 
