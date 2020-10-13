@@ -74,6 +74,88 @@
 					<header class="align-center">
 						<h2>語法框架與輸出輸入</h2>
 					</header>
+					<div>
+						<h3 id="c-">C++程式的基本結構</h3>
+<p>撰寫C++程式時，必須遵照一定的格式開始撰寫，通常在開啟一個新程式時都會按照以下的框架：</p>
+<pre><code class="lang-cpp"><span class="hljs-number">1.</span> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-number">2.</span> <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-number">3.</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+<span class="hljs-number">4.</span>
+<span class="hljs-number">5.</span> }
+</code></pre>
+<p>註:每行程式碼開頭的數字代表行號，是為了方便我們偵錯、維護程式而自動產生，在寫程式的時候不要照著打，設計良好的編譯器會幫你顯
+示在旁邊，但是行號的有無完全不影響程式的執行。</p>
+<p>這個框架依照功能可以區分為三個部分，這三個部分對於初學者來說缺一不可，依序為：</p>
+<ol>
+<h4><li>標頭檔 #include&lt;iostream&gt;</li></h4>
+<p>
+寫程式時會使用到C++官方定制的標頭檔，在導入這些標頭檔之後就可以使用標頭檔提供的相關功能。一般來說通常會使用 iostream 這個標頭檔，提供程式進行基本的輸入輸出(input/output stream)，標頭檔名稱須以角括號 &lt;&gt; 包夾住。
+除了iostream以外，也有相當多可以使用的標頭檔，當你有需要時只要多幾行#include那些標頭檔即可。你也可以記住 bits/stdc++.h 這個標
+頭檔，它會把你在學習程式的過程中所有常用的標頭檔全數導入。</p>
+
+<h4><li>使用名稱空間 using namespace std;</li></h4>
+<p>
+C++具有物件導向的功能，而有一個稱為名稱空間(namespace)的概念，我們通常會使用C++所提供的標準名稱空間(std, standard的縮寫)。std名稱空間之下，規定了許多常用的關鍵字，因此請務必不要遺漏這行。</p>
+<h4><li>主函式 int main( ){ }</li></h4>
+<p>
+當執行一段C++程式時，電腦會由主函式內的第一行開始執行，每一行內文稱作一個「指令」，直到執行至最後一行為止結束程式。主函式內的所有指令由一組大括號{ }包夾住，這個大括號同樣也會在其他語法裡出現，通常代表的是一個程式碼片段的內容範圍，剛開始學程式時建議都先把所有指令寫在主函式內。除了#include標頭檔與大括號以外，大部分的指令都必須在結尾加上分號。</p>
+</ol>
+<h3 id="-">寫程式的三大利器</h3>
+<p>除了上述介紹的程式結構以外，了解撰寫程式介面的一些特性，能幫助你學習程式事半功倍。多數的IDE與先前介紹的純文字編輯器都具有「語法凸顯(Syntax highlight)」的功能，將不同的關鍵字用不同的顏色來表示，目的是讓寫程式的人輕鬆的看出程式碼的結構，增加撰寫效率。語法凸顯並沒有統一的規範，但是你可以根據常見的語法凸顯方式幫助自己記憶。</p>
+<table><tr><td>
+<pre><code class="text">1. #include&lt;iostream&gt;
+2. using namespace std;
+3. int main(){
+4. cout&lt;&lt;"Hello, world!"&lt;&lt;endl;
+5. }
+</code></pre>
+</td><td>
+<pre><code class="lang-cpp"><span class="hljs-number">1.</span> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-number">2.</span> <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-number">3.</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+<span class="hljs-number">4.</span> <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;Hello, world!&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+<span class="hljs-number">5.</span> }
+</code></pre>
+</td></tr>
+<tr><td>無語法凸顯的程式碼</td><td>有語法凸顯的程式碼</td></tr></table>
+
+<p>除了語法凸顯以外，在撰寫程式時，我們也會利用對齊程式碼的方式，凸顯出程式的結構，這種方式稱作「縮排」。通常一個縮排會使用四個空格或一個tab鍵的寬度來表示，雖然對C++來說縮排並非必要，但是如果想清楚的看出程式的結構，縮排肯定會相當有幫助。</p>
+<table><tr><td>
+<pre><code class="lang-cpp"><span class="hljs-number">1.</span> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-number">2.</span> <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-number">3.</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+<span class="hljs-number">4.</span> <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;Hello, world!&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+<span class="hljs-number">5.</span> }
+</code></pre>
+</td><td>
+<pre><code class="lang-cpp"><span class="hljs-number">1.</span> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-number">2.</span> <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-number">3.</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+<span class="hljs-number">4.</span> <span class="hljs-built_in">    cout</span>&lt;&lt;<span class="hljs-string">&quot;Hello, world!&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+<span class="hljs-number">5.</span> }
+</code></pre>
+</td></tr>
+<tr><td>無縮排的程式碼</td><td>有縮排的程式碼</td></tr></table>
+
+<p>最後一項好用的工具就是「註解」，對電腦來說,註解是寫給人類看的，是程式編譯時不會被執行到的區域。不過不要小看註解的功能，正因為程式不會執行到註解的內容，因此你可以在註解裡面放入任何幫你記憶程式功能的文字說明，甚至當你不想執行你所寫下某個段落的程式碼時，使用註解可以讓你在不用刪除它們的前提之下讓那些程式碼「隱身」。</p>
+<table><tr><td>
+<pre><code class="lang-cpp"><span class="hljs-number">1.</span> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-number">2.</span> <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-number">3.</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+<span class="hljs-number">4.</span>     <span class="hljs-comment">// 這是單行註解,在兩個斜線後方的內容都不會被執行</span>
+<span class="hljs-number">5.</span> }
+</code></pre>
+</td><td>
+<pre><code class="lang-cpp"><span class="hljs-bullet">1. </span>#include<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">iostream</span>&gt;</span></span>
+<span class="hljs-bullet">2. </span>using namespace std;
+<span class="hljs-bullet">3. </span>int main(){
+<span class="hljs-bullet">4.     </span>/*
+<span class="hljs-bullet">5.     </span>這是多行註解,在 &quot;/<span class="hljs-emphasis"></em>&quot; 與 &quot;<em></span>/&quot; 這個段落之間的內容都不會被執行
+<span class="hljs-bullet">6.     </span>*/
+<span class="hljs-bullet">7. </span>}
+</code></pre>
+</td></tr></table>
+					</div>
 				</div>
 			</section>
 
